@@ -7,13 +7,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.PersonalDataSearchController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../CSS/SearchPersonalData.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.PersonalDataSearchController">
    <children>
       <TableView fx:id="uTable" layoutX="300.0" layoutY="54.0" prefHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
-          <TableColumn fx:id="unameColumn" prefWidth="150.0" text="이름" />
-          <TableColumn fx:id="utypeColumn" prefWidth="150.0" text="종류" />
-            <TableColumn fx:id="uamountColumn" prefWidth="200.0" text="금액" />
+          <TableColumn fx:id="unameColumn" prefWidth="100.0" text="이름" />
+          <TableColumn fx:id="utypeColumn" prefWidth="100.0" text="종류" />
+            <TableColumn fx:id="uamountColumn" prefWidth="149.0" text="금액" />
+            <TableColumn fx:id="timestampColumn" prefWidth="149.0" text="날짜" />
         </columns>
       </TableView>
       <Button layoutX="123.0" layoutY="73.0" mnemonicParsing="false" onAction="#selectFolder" text="폴더 선택" />

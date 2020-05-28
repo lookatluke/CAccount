@@ -7,6 +7,8 @@ package com.e.caccount.views;
 
 import com.e.caccount.CAccounting;
 import com.e.caccount.Model.UserData;
+import com.e.caccount.Model.userModel;
+import com.e.caccount.Utils.SearchlData;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,9 +26,11 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import javafx.util.converter.NumberStringConverter;
 
 /**
  * FXML Controller class
@@ -40,34 +44,38 @@ public class PersonalDataSearchController implements Initializable {
     @FXML
     private TextField name;
     @FXML
-    private TableView<UserData> uTable;
+    private TableView<userModel> uTable;
     @FXML
-    private TableColumn<UserData, String> unameColumn;
+    private TableColumn<userModel, String> unameColumn;
     @FXML
-    private TableColumn<UserData, String> utypeColumn;
+    private TableColumn<userModel, String> utypeColumn;
     @FXML
-    private TableColumn<UserData, Number> uamountColumn;
+    private TableColumn<userModel, Number> uamountColumn;
     @FXML
-    private TableColumn<UserData, String> timestampColumn;
+    private TableColumn<userModel, String> timestampColumn;
 
-    private ObservableList<UserData> uList = FXCollections.observableArrayList();
+    private ObservableList<userModel> uList = FXCollections.observableArrayList();
+
+    private List<userModel> receivedList = new ArrayList<>();
+    private SearchlData searchPersonalData;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        if (searchPersonalData == null) {
+            searchPersonalData = new SearchlData();
+        }
+        searchPersonalData.start();
         // 테이블 세팅
         uTable.setItems(uList);
+        uTable.setEditable(false);
         unameColumn.setCellValueFactory(value -> value.getValue().NameProperty());
         utypeColumn.setCellValueFactory(value -> value.getValue().TypeProperty());
         uamountColumn.setCellValueFactory(value -> value.getValue().AmountProperty());
-        timestampColumn.setCellValueFactory(value -> {
-            // Get time Reference
-            // Convert it            
-            StringProperty timeStamp = new SimpleStringProperty();
-            return timeStamp;
-        });
+        uamountColumn.setCellFactory(TextFieldTableCell.forTableColumn(new NumberStringConverter()));
+        timestampColumn.setCellValueFactory(value -> value.getValue().DateTimeProperty());
     }
     ////////////////////////////////////////////////////////////////////////////
     //////////////////               SET MAIN                //////////////////////
@@ -76,6 +84,12 @@ public class PersonalDataSearchController implements Initializable {
 
     public void setMain(CAccounting main) {
         this.Main = main;
+        Main.getPersonalDataSearchStage().setOnCloseRequest((event) -> {
+            if (searchPersonalData != null) {
+                System.out.println("out");
+                searchPersonalData.interrupt();
+            }
+        });
     }
 
     @FXML
@@ -86,6 +100,7 @@ public class PersonalDataSearchController implements Initializable {
 
     @FXML
     public void startFind() {
+        Main.startProgressIndicator();
         if (url != null) {
             String user_name = name.getText().toString();
             if (!user_name.equals("") && user_name != null) {
@@ -98,12 +113,12 @@ public class PersonalDataSearchController implements Initializable {
         } else {
             showAlert("데이터 폴더를 선택하지 않으셨습니다", "오류", "폴더없음");
         }
+        Main.stopProgressIndicator();
     }
 
-    private List<UserData> receivedList = new ArrayList<>();
-
     private void getDataList(String user_name) {
-        receivedList = null;
+        receivedList.clear();
+        receivedList = searchPersonalData.getPersonalHistory(url, user_name);
     }
 
     public void showAlert(String message, String title, String headerTxt) {
@@ -114,5 +129,4 @@ public class PersonalDataSearchController implements Initializable {
         stage.getIcons().add(new Image(CAccounting.class.getResourceAsStream("resources/_stageIcon.png")));
         alert.showAndWait();
     }
-
 }

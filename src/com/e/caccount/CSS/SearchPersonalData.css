@@ -1,0 +1,7 @@
+#uamountColumn{
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.table-column{
+    -fx-alignment: CENTER;
+}

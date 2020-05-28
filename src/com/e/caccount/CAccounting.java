@@ -359,6 +359,10 @@ public class CAccounting extends Application {
         return this.reorderStage;
     }
 
+    public Stage getPersonalDataSearchStage(){
+        return this.personaldatasearchStage;
+    }
+    
     public void hideQRstage() {
         QRStage.hide();
     }
