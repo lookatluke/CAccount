@@ -547,7 +547,7 @@ public class AccountBookController implements Initializable, Observer {
     public static void setAutoFitTableColumns(TableView tableView, Object tableColumn) {
         try {
             columnToFitMethod.invoke(tableView.getSkin(), tableColumn, -1);
-        } catch (IllegalAccessException | InvocationTargetException e) {
+        } catch (Exception e) {
         }
     }
 
