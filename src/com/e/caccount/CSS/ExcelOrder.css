@@ -1,0 +1,39 @@
+#AnchorPane{
+    -fx-background-color: white;
+}
+
+#ok{
+    -fx-background-color: linear-gradient(#5b5b5b, #3c3c3c);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#ok:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
+}
+
+#up{
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#up:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
+}
+
+#down{
+    -fx-background-color: linear-gradient(#73C2FB, #4C516D);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#down:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
+}

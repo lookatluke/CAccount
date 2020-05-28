@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.PersonalDataSearchController">
+   <children>
+      <TableView fx:id="uTable" layoutX="300.0" layoutY="54.0" prefHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="unameColumn" prefWidth="150.0" text="이름" />
+          <TableColumn fx:id="utypeColumn" prefWidth="150.0" text="종류" />
+            <TableColumn fx:id="uamountColumn" prefWidth="200.0" text="금액" />
+        </columns>
+      </TableView>
+      <Button layoutX="123.0" layoutY="73.0" mnemonicParsing="false" onAction="#selectFolder" text="폴더 선택" />
+      <Button layoutX="124.0" layoutY="354.0" mnemonicParsing="false" onAction="#startFind" text="검색 시작" />
+      <Label layoutX="76.0" layoutY="142.0" prefHeight="80.0" prefWidth="180.0" text="데이터가 저장된 최상위 폴더를 선택해 주세요" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="39.0" layoutY="78.0" text="1" />
+      <Label layoutX="39.0" layoutY="173.0" text="2" />
+      <Label layoutX="39.0" layoutY="271.0" text="3" />
+      <TextField fx:id="name" layoutX="73.0" layoutY="266.0" prefHeight="29.0" prefWidth="180.0" />
+      <Label layoutX="39.0" layoutY="359.0" text="4" />
+   </children>
+</AnchorPane>

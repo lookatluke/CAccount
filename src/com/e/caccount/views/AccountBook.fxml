@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="MainPane" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: white;" stylesheets="@../CSS/AccountBook.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.AccountBookController">
+   <children>
+      <ScrollPane fx:id="TableScrollPane" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <HBox fx:id="TableView" />
+         </content>
+      </ScrollPane>
+      <AnchorPane fx:id="ControllPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ComboBox fx:id="comboBox" layoutX="55.0" layoutY="55.0" onAction="#comboAction" prefWidth="150.0" />
+            <TextField fx:id="user_name" layoutX="248.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" />
+            <TextField fx:id="user_amount" layoutX="422.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" />
+            <Button fx:id="OkBtn" defaultButton="true" layoutX="591.0" layoutY="54.0" mnemonicParsing="false" onAction="#InsertBtn" text="ENTER" />
+            <Spinner fx:id="OhManwon" layoutX="309.0" layoutY="205.0" prefHeight="29.0" prefWidth="86.0" />
+            <Spinner fx:id="Manwon" layoutX="309.0" layoutY="161.0" prefHeight="29.0" prefWidth="86.0" />
+            <Spinner fx:id="OhChoenwon" layoutX="309.0" layoutY="118.0" prefHeight="29.0" prefWidth="86.0" />
+            <Spinner fx:id="Choenwon" layoutX="115.0" layoutY="205.0" prefHeight="29.0" prefWidth="86.0" />
+            <Spinner fx:id="OhBaekwon" layoutX="115.0" layoutY="161.0" prefHeight="29.0" prefWidth="86.0" />
+            <Spinner fx:id="Baekwon" layoutX="115.0" layoutY="118.0" prefHeight="29.0" prefWidth="86.0" />
+            <Label fx:id="SumofCoinAndBills" layoutX="567.0" layoutY="188.0" text="0 원" />
+            <Label layoutX="63.0" layoutY="123.0" text="백원" />
+            <Label layoutX="55.0" layoutY="166.0" text="오백원" />
+            <Label layoutX="63.0" layoutY="210.0" text="천원" />
+            <Label layoutX="249.0" layoutY="123.0" text="오천원" />
+            <Label layoutX="256.0" layoutY="166.0" text="만원" />
+            <Label layoutX="249.0" layoutY="210.0" text="오만원" />
+            <Label layoutX="452.0" layoutY="188.0" text="동전/지폐 합계" />
+            <Label layoutX="467.0" layoutY="144.0" text="타입 합계" />
+            <Label fx:id="TYPESUM" layoutX="567.0" layoutY="144.0" text="0 원" />
+            <FlowPane layoutX="766.0" layoutY="31.0" prefHeight="30.0" prefWidth="230.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Circle fx:id="status" fill="#ff1f1f" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label fx:id="serverRunnig" text="서버가 운영중이지 않습니다!">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
+      </AnchorPane>
+      <FlowPane fx:id="PlustBtn" prefHeight="40.0" prefWidth="40.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <FlowPane fx:id="RegBtnPane" alignment="CENTER" prefHeight="150.0" prefWidth="300.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label fx:id="RegTitle" text="새로 등록하실 타입을 입력하세요">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="HYSinMyeongJo-Medium" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="RegType" text="타입 :">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="RegTxtField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="RegBtn" mnemonicParsing="false" text="등록">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="RegCancelBtn" mnemonicParsing="false" text="취소" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></FlowPane>
+   </children>
+</AnchorPane>

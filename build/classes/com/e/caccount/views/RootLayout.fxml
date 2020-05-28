@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="790.0" minWidth="1024.0" prefHeight="790.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.RootLayoutController">
+   <top>
+      <MenuBar style="-fx-background-color: #FFDB69;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="파일">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#startOver" text="새로 시작하기">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#LoadData" text="파일열기">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="파일저장">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#SaveASData" text="다른이름으로 저장" />
+              <MenuItem mnemonicParsing="false" onAction="#ExitProgram" text="끝내기" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="편집">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#openReorderPage" text="테이블 재배치" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="서버">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#OpenServer" text="서버열기" />
+                  <MenuItem mnemonicParsing="false" onAction="#CloseServer" text="서버닫기" />
+                  <MenuItem mnemonicParsing="false" onAction="#openSendEmail" text="메일발송" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="데이터 베이스">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#openPersonalDataSearchPage" text="개별 검색" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="엑셀">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#SaveFileAsExcel" text="헌금집계표 만들기" />
+                  <MenuItem mnemonicParsing="false" onAction="#SaveOneTypeToExcel" text="타입별 저장" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="QR코드">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#OpenQRcodeMaker" text="QR코드 만들기" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="도움말">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openHelpPage" text="사용법">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

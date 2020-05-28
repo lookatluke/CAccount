@@ -1,0 +1,15 @@
+#AnchorPane{
+    -fx-background-color: white;
+}
+
+#sendBtn{
+    -fx-background-color: linear-gradient(#abdcff, #0396ff);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#sendBtn:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
+}

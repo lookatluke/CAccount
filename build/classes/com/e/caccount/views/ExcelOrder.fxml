@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" stylesheets="@../CSS/ExcelOrder.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.ExcelOrderController">
+   <children>
+      <Label layoutX="80.0" layoutY="43.0" text="순서를 정해 주세요" />
+      <ListView fx:id="typeList" layoutX="45.0" layoutY="85.0" prefHeight="374.0" prefWidth="200.0" />
+      <Button fx:id="up" layoutX="288.0" layoutY="94.0" mnemonicParsing="false" onAction="#up" prefHeight="29.0" prefWidth="79.0" text="UP" />
+      <Button fx:id="down" layoutX="288.0" layoutY="148.0" mnemonicParsing="false" onAction="#down" prefHeight="29.0" prefWidth="79.0" text="DOWN" />
+      <Button fx:id="ok" layoutX="288.0" layoutY="430.0" mnemonicParsing="false" onAction="#ok" prefHeight="29.0" prefWidth="79.0" text="OK" />
+   </children>
+</AnchorPane>

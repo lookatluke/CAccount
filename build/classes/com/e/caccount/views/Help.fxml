@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane id="AnchorPane" fx:id="HelpSplitPane" dividerPositions="0.2" prefHeight="400.0" prefWidth="800.0" stylesheets="@../CSS/Help.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.e.caccount.views.HelpController">
+   <items>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: orange;">
+         <children>
+            <Label fx:id="intro" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: orange;" text="인사말" />
+            <Label fx:id="BasicIntro" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: orange;" text="기본 사용법" />
+            <Label fx:id="NetworkIntro" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: orange;" text="네트워크 연결" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="ImagePane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <FlowPane fx:id="afterward" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0" />
+            <FlowPane fx:id="backward" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="150.0" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

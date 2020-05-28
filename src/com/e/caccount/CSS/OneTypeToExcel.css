@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'JejuMyeongjo';
+    src: url('JejuMyeongjo.ttf');
+}
+@font-face {
+    font-family: 'SpoqaHanSans-Light';
+    src: url('Spoqa-Han-Sans-Light.ttf');
+}
+#AnchorPane{
+    -fx-background-color: white;
+}
+#Title{    
+    -fx-font-size: 12pt;
+    -fx-font-family: "JejuMyeongjo";
+}
+#OK{
+    -fx-background-color: linear-gradient(#73C2FB, #4C516D);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 12pt;
+}
+#OK:hover{
+    -fx-font-size: 11.5pt;
+    -fx-cursor: hand;
+}
+
+#Close{
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 12pt;
+}
+#Close:hover{
+    -fx-font-size: 11.5pt;
+    -fx-cursor: hand;
+}
