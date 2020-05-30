@@ -1,7 +1,35 @@
+#AnchorPane{
+    -fx-background-color: white;
+}
+
 #uamountColumn{
     -fx-alignment: CENTER_RIGHT;
 }
 
 .table-column{
     -fx-alignment: CENTER;
+}
+
+#search{
+    -fx-background-color: linear-gradient(#5b5b5b, #3c3c3c);
+    -fx-background-radius:15;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#search:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
+}
+
+#folder{
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 15;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+#folder:hover{
+    -fx-font-size: 9.5pt;
+    -fx-cursor: hand;
 }

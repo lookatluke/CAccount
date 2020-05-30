@@ -3,8 +3,8 @@
 [Setup]
 AppId={{com.e.caccount}}
 AppName=CAccounting
-AppVersion=1.4
-AppVerName=CAccounting 1.4
+AppVersion=1.8
+AppVerName=CAccounting 1.8
 AppPublisher=Luke
 AppComments=CAccounting
 AppCopyright=Copyright (C) 2019
@@ -23,7 +23,7 @@ DefaultGroupName=Luke
 LicenseFile=
 ;WinXP or above
 MinVersion=0,5.1 
-OutputBaseFilename=CAccounting-1.4
+OutputBaseFilename=CAccounting-1.8
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequired=admin

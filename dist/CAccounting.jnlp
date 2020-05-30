@@ -10,7 +10,7 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
     <jar href="lib\CAccounting-Preloader.jar" size="21190" download="progress" />
-    <jar href="CAccounting.jar" size="17243733" download="eager" />
+    <jar href="CAccounting.jar" size="17241278" download="eager" />
     <jar href="lib\commons-codec-1.12.jar" size="339669" download="eager" />
     <jar href="lib\commons-collections4-4.3.jar" size="753996" download="eager" />
     <jar href="lib\commons-compress-1.18.jar" size="591748" download="eager" />

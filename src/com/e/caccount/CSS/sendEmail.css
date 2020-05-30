@@ -3,8 +3,8 @@
 }
 
 #sendBtn{
-    -fx-background-color: linear-gradient(#abdcff, #0396ff);
-    -fx-background-radius: 30;
+    -fx-background-color: linear-gradient(#5b5b5b, #3c3c3c);
+    -fx-background-radius:10;
     -fx-background-insets: 0;
     -fx-text-fill: white;
     -fx-font-size: 10pt;

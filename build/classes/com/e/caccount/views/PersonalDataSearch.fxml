@@ -17,13 +17,13 @@
             <TableColumn fx:id="timestampColumn" prefWidth="149.0" text="날짜" />
         </columns>
       </TableView>
-      <Button layoutX="123.0" layoutY="73.0" mnemonicParsing="false" onAction="#selectFolder" text="폴더 선택" />
-      <Button layoutX="124.0" layoutY="354.0" mnemonicParsing="false" onAction="#startFind" text="검색 시작" />
+      <Button fx:id="folder" layoutX="92.0" layoutY="73.0" mnemonicParsing="false" onAction="#selectFolder" prefHeight="36.0" prefWidth="139.0" text="폴더 선택" />
+      <Button fx:id="search" defaultButton="true" layoutX="92.0" layoutY="358.0" mnemonicParsing="false" onAction="#startFind" prefHeight="36.0" prefWidth="139.0" text="검색 시작" />
       <Label layoutX="76.0" layoutY="142.0" prefHeight="80.0" prefWidth="180.0" text="데이터가 저장된 최상위 폴더를 선택해 주세요" textAlignment="CENTER" wrapText="true" />
       <Label layoutX="39.0" layoutY="78.0" text="1" />
       <Label layoutX="39.0" layoutY="173.0" text="2" />
       <Label layoutX="39.0" layoutY="271.0" text="3" />
-      <TextField fx:id="name" layoutX="73.0" layoutY="266.0" prefHeight="29.0" prefWidth="180.0" />
-      <Label layoutX="39.0" layoutY="359.0" text="4" />
+      <TextField fx:id="name" layoutX="94.0" layoutY="266.0" prefHeight="29.0" prefWidth="139.0" promptText="이 름" />
+      <Label layoutX="39.0" layoutY="366.0" text="4" />
    </children>
 </AnchorPane>

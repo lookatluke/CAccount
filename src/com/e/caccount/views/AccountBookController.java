@@ -11,7 +11,6 @@ import com.e.caccount.Model.UserData;
 import com.e.caccount.Utils.CheckNumber;
 import com.e.caccount.Utils.NetworkConnection;
 import com.sun.javafx.scene.control.skin.TableViewSkin;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.text.NumberFormat;
@@ -65,7 +64,6 @@ import javafx.util.converter.NumberStringConverter;
  * @author trito
  */
 public class AccountBookController implements Initializable, Observer {
-
     ////////////////////////////////////////////////////////////////////////////
     //////////////////                VARIABLES           //////////////////////
     ////////////////////////////////////////////////////////////////////////////

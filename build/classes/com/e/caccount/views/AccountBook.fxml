@@ -23,9 +23,9 @@
       </ScrollPane>
       <AnchorPane fx:id="ControllPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <ComboBox fx:id="comboBox" layoutX="55.0" layoutY="55.0" onAction="#comboAction" prefWidth="150.0" />
-            <TextField fx:id="user_name" layoutX="248.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" />
-            <TextField fx:id="user_amount" layoutX="422.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBox" layoutX="55.0" layoutY="55.0" onAction="#comboAction" prefWidth="150.0" promptText="헌금종류" />
+            <TextField fx:id="user_name" layoutX="248.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" promptText="이름" />
+            <TextField fx:id="user_amount" layoutX="422.0" layoutY="52.0" prefHeight="31.0" prefWidth="150.0" promptText="금액" />
             <Button fx:id="OkBtn" defaultButton="true" layoutX="591.0" layoutY="54.0" mnemonicParsing="false" onAction="#InsertBtn" text="ENTER" />
             <Spinner fx:id="OhManwon" layoutX="309.0" layoutY="205.0" prefHeight="29.0" prefWidth="86.0" />
             <Spinner fx:id="Manwon" layoutX="309.0" layoutY="161.0" prefHeight="29.0" prefWidth="86.0" />

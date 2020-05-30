@@ -22,6 +22,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -53,6 +54,10 @@ public class PersonalDataSearchController implements Initializable {
     private TableColumn<userModel, Number> uamountColumn;
     @FXML
     private TableColumn<userModel, String> timestampColumn;
+    @FXML
+    private Button folder;
+    @FXML
+    private Button search;
 
     private ObservableList<userModel> uList = FXCollections.observableArrayList();
 
@@ -100,20 +105,20 @@ public class PersonalDataSearchController implements Initializable {
 
     @FXML
     public void startFind() {
-        Main.startProgressIndicator();
         if (url != null) {
             String user_name = name.getText().toString();
             if (!user_name.equals("") && user_name != null) {
+                Main.startProgressIndicator();
                 getDataList(user_name);
                 uList.clear();
                 uList.addAll(receivedList);
+                Main.stopProgressIndicator();
             } else {
                 showAlert("찾으실 분의 이름을 입력해 주세요.", "오류", "정보없음");
             }
         } else {
             showAlert("데이터 폴더를 선택하지 않으셨습니다", "오류", "폴더없음");
         }
-        Main.stopProgressIndicator();
     }
 
     private void getDataList(String user_name) {
